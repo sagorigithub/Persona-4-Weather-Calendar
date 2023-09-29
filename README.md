@@ -1,2 +1,0 @@
-# Persona-4-Weather-Calendar
-Simple site inspired by the weather calendar from Persona 4 Golden. This site gets the user's location, and then displays the weather forecast for the city for the day. The plan is to have a full week's forecast when I complete this (script.js already has an array with a full week's forecast I just suck at CSS.) Also works completely in the front end so that's cool, I guess.
