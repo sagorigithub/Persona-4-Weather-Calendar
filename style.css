@@ -1,0 +1,89 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: black;
+}
+
+.rectangle {
+  width: calc(1/7 * 100vw);
+  height: 100vh;
+  background-color: yellow;
+  position: absolute;
+  left: calc(1/7 * 100vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.year {
+  text-align: center;
+  font-size: 4vh;
+  padding: 2vh;
+  margin-bottom: 0vh; 
+}
+
+.month {
+  text-align: center;
+  font-size: 12vh;
+  padding: 2vh;
+  margin-bottom: -8vh;
+  transform: rotate(27deg);
+  
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.image-day-1 {
+  align-items: center;
+  margin-bottom: 0vh;
+}
+
+.date {
+  text-align: center;
+  margin-bottom: 0vh;
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+.precipitation-probability {
+  text-align: center;
+  font-size: 1.5vh;
+  padding: 2vh;
+  margin-bottom: 28vh; 
+}
+
+
+@media (orientation: portrait) {
+  .rectangle {
+    display: none;
+  }
+  
+  .notice {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background-color: red;
+    color: white;
+  }
+
+  html {
+    overflow-y: hidden;
+  }
+
+}
+
+@media (orientation: landscape) {
+  .notice {
+    display: none;
+  }
+}
+
+/* Only removes scrolling when the pixel height of the screen is more than 600 pixels. */
+@media only screen and (min-height: 600px) {
+  html, body {
+    overflow:hidden;
+  }
+}
