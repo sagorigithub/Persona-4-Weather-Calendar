@@ -15,6 +15,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  top: 0px;
 }
 
 .year {
@@ -36,16 +37,25 @@ html {
   user-select: none;
 }
 
+/* .image-day-0 {
+  align-items: center;
+  width: calc(1/7 * 100vw);
+  top: 20vh;
+  left: calc(0/7 * 100vw);
+}
+
 .image-day-1 {
   align-items: center;
   margin-bottom: 0vh;
-}
+} */
 
 .date {
   text-align: center;
-  margin-bottom: 0vh;
+  margin-top: 0vh;
   padding: 2vh;
   font-size: 2vh;
+  position:relative;
+  top:1vh;
 }
 
 .precipitation-probability {
@@ -53,6 +63,17 @@ html {
   font-size: 1.5vh;
   padding: 2vh;
   margin-bottom: 28vh; 
+}
+#images-container {
+  position:relative;
+  width:100vw;
+  transform:translateX(calc(-1/7 * 100vw));
+  margin-bottom: 0;
+  height:calc(1/7 * 100vw);
+}
+#images-container img {
+  height: calc(1/7 * 100vw);
+  width: auto;
 }
 
 

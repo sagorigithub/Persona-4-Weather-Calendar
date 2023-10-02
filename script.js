@@ -5,15 +5,18 @@ document.getElementById("month").textContent = month + 1;
 document.getElementById("date").textContent = days[weekDay] + monthDay;
 
 //SOLUTION: put all of the things that rely on lat and long or the API response inside of this function. ↓
-navigator.geolocation.getCurrentPosition(function(position) {
+navigator.geolocation.getCurrentPosition(function(position) 
+{
   const latitude = position.coords.latitude, longitude = position.coords.longitude;
   const URL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode,precipitation_probability_max&timezone=auto&past_days=1`;
   // Get the API response
-  function reqListener() {
+  function reqListener() 
+  {
     const json = JSON.parse(this.responseText);
     let weatherCodes = json.daily.weathercode, precipProb = json.daily.precipitation_probability_max.slice(1, 2);
 
-    const images = {
+    const images = 
+    {
       0: "assets/sun.png",
       1: "assets/sun-cloud.png",
       2: "assets/sun-cloud.png",
@@ -45,9 +48,10 @@ navigator.geolocation.getCurrentPosition(function(position) {
     }
 
     document.getElementById("precip-prob").textContent = `Precipitation Probability: ${precipProb}%`;
-    document.getElementById("img-day1").src = images[weatherCodes[1]];
-
-
+    for (let i = 0; i < 7; i++) 
+    {
+      document.getElementById("img-day" + i).src = images[weatherCodes[i]];
+    }
   }
 
   const req = new XMLHttpRequest();
@@ -55,9 +59,3 @@ navigator.geolocation.getCurrentPosition(function(position) {
   req.open("GET", URL);
   req.send();
 });
-
-
-
-
-
-//API documentation for future reference (including all the settings I set): https://open-meteo.com/en/docs#latitude=39.9612&longitude=-82.9988&hourly=&daily=weathercode,precipitation_probability_max&timezone=auto&past_days=1
