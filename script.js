@@ -45,7 +45,7 @@ navigator.geolocation.getCurrentPosition(function(position)
       95: "assets/rain-cloud.png",
       96: "assets/rain-cloud.png",
       99: "assets/rain.png"
-    }
+    };
 
     document.getElementById("precip-prob").textContent = `Precipitation Probability: ${precipProb}%`;
     for (let i = 0; i < 7; i++) 

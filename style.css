@@ -37,18 +37,6 @@ html {
   user-select: none;
 }
 
-/* .image-day-0 {
-  align-items: center;
-  width: calc(1/7 * 100vw);
-  top: 20vh;
-  left: calc(0/7 * 100vw);
-}
-
-.image-day-1 {
-  align-items: center;
-  margin-bottom: 0vh;
-} */
-
 .date {
   text-align: center;
   margin-top: 0vh;
