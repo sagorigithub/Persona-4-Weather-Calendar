@@ -17,40 +17,40 @@ navigator.geolocation.getCurrentPosition(function(position)
 
     const images = 
     {
-      0: "assets/sun.png",
-      1: "assets/sun-cloud.png",
-      2: "assets/sun-cloud.png",
-      3: "assets/cloud.png",
-      45: "assets/cloud.png",
-      48: "assets/cloud.png",
-      51: "assets/rain-cloud.png",
-      53: "assets/rain-cloud.png",
-      55: "assets/rain.png",
-      56: "assets/rain-cloud.png",
-      57: "assets/rain.png",
-      61: "assets/rain.png",
-      63: "assets/rain.png",
-      65: "assets/rain.png",
-      66: "assets/rain.png",
-      67: "assets/rain.png",
-      71: "assets/snow-cloud.png",
-      73: "assets/snow.png",
-      75: "assets/snow.png",
-      77: "assets/snow.png",
-      80: "assets/rain-cloud.png",
-      81: "assets/rain-cloud.png",
-      82: "assets/rain.png",
-      85: "assets/snow-cloud.png",
-      86: "assets/snow.png",
-      95: "assets/rain-cloud.png",
-      96: "assets/rain-cloud.png",
-      99: "assets/rain.png"
+      0: "sun",
+      1: "sun-cloud",
+      2: "sun-cloud",
+      3: "cloud",
+      45: "cloud",
+      48: "cloud",
+      51: "rain-cloud",
+      53: "rain-cloud",
+      55: "rain",
+      56: "rain-cloud",
+      57: "rain",
+      61: "rain",
+      63: "rain",
+      65: "rain",
+      66: "rain",
+      67: "rain",
+      71: "snow-cloud",
+      73: "snow",
+      75: "snow",
+      77: "snow",
+      80: "rain-cloud",
+      81: "rain-cloud",
+      82: "rain",
+      85: "snow-cloud",
+      86: "snow",
+      95: "rain-cloud",
+      96: "rain-cloud",
+      99: "rain"
     };
 
     document.getElementById("precip-prob").textContent = `Precipitation Probability: ${precipProb}%`;
     for (let i = 0; i < 7; i++) 
     {
-      document.getElementById("img-day" + i).src = images[weatherCodes[i]];
+      document.getElementById("img-day" + i).src = `assets/${images[weatherCodes[i]]}.png`;
     }
   }
 
