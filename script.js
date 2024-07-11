@@ -13,7 +13,7 @@ navigator.geolocation.getCurrentPosition(function(position)
   function reqListener() 
   {
     const json = JSON.parse(this.responseText);
-    let weatherCodes = json.daily.weathercode, precipProb = json.daily.precipitation_probability_max.slice(1, 2);
+    let weatherCodes = json.daily.weathercode, precipProb = json.daily.precipitation_probability_max[1];
 
     const images = 
     {
